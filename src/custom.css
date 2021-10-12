@@ -1,0 +1,17 @@
+.CodeMirror,
+iframe {
+  min-height: 50vh !important;
+}
+
+.cm-s-material.CodeMirror,
+.cm-s-material .CodeMirror-gutters {
+  background-color: rgb(17, 24, 39) !important;
+}
+
+@media (min-width: 768px) {
+
+  .CodeMirror,
+  iframe {
+    min-height: calc(100vh - 44px) !important;
+  }
+}
