@@ -2,6 +2,7 @@ import { FaEnvelope, FaKey } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../context/AuthProvider";
+import {Error} from '../compoents';
 
 const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
@@ -53,12 +54,8 @@ const Login = () => {
 
   return (
     <section className="max-w-xl m-auto mt-20">
-      {error && (
-        <div className="bg-red-300 text-red-800 font-medium p-2 rounded-sm mb-6 text-center">
-          {error}
-        </div>
-      )}
-      <div className="shadow-lg rounded  p-6">
+      {error && <Error e={error}/>}
+      <div className="shadow-lg rounded  p-6 mt-6">
         <h2 className="text-center text-2xl">
           Welcome Back, Let's Center Some Divs
         </h2>

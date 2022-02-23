@@ -1,0 +1,8 @@
+.CodeMirror-scroll {
+    position: absolute !important;
+    overflow: hidden !important;
+}
+
+.CodeMirror-wrap pre {
+    word-break: break-word !important;
+}

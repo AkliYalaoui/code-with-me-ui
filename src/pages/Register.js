@@ -2,6 +2,7 @@ import { FaUser, FaKey,FaEnvelope } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../context/AuthProvider";
+import { Error } from "../compoents";
 
 const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
@@ -66,11 +67,7 @@ const Register = () => {
 
   return (
     <section className="max-w-xl m-auto mt-6">
-      {errors && errors.map((e,i) => (
-        <div key={i} className="bg-red-300 text-red-800 font-medium p-2 rounded-sm mb-2 text-center">
-          {e}
-        </div>
-      ))}
+      {errors && errors.map((e,i) => <Error key={i} e={e}/>)}
       <div className="shadow-lg rounded  p-6 mt-4">
         <h2 className="text-center text-2xl">
           Hey There, Join Us And Enjoy Coding In <br/> Real Time
